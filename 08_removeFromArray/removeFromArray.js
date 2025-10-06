@@ -1,7 +1,7 @@
-const removeFromArray = function(arr,num1, num2) {
+const removeFromArray = function(arr, ...args) {
     let newArr = arr;
     for(let i = 0; i < arr.length; i++){
-        if(arr[i] === num1 || arr[i] === num2){
+        if(args.includes(arr[i])){
             newArr.splice(i, 1);
             i--;
         }
